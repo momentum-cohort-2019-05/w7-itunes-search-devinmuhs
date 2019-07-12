@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+.search {
+    text-align: center;
+}
+
+.button-line {
+    text-align: center;   
+}
+
+.music-player {
+    text-align: center;
+}
+
+.music-bar {
+    width: 500px;
+    height: 30px;
+    color: lightgray;
+    margin-bottom: 50px;
+}
+
+#input {
+    width: 500px;
+    font-size: 16px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: lightgray;
+    height: 27px;
+    margin-bottom: 50px;
+}
+
+#search-button {
+    background-color: lightgray;
+    border-radius: 25px;
+    border: none;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+input:focus {
+    outline:0;
+} 
+
+/* .artist-info {
+    padding-left: 100px;
+} */
+
+.artist-div {
+    padding-left: 100px;
+    float:left;
+    width: 200px;
+    height:200px;
+    margin-bottom: 50px;
+}
+
+.track {
+    margin-bottom: 10px;
+}
