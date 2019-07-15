@@ -11,6 +11,8 @@ let results
 let search = document.querySelector("#search-button")
 let music = document.querySelector('#music-bar')
 let audio = document.querySelector('#audio-controls')
+let playing = document.querySelector('.nowPlaying')
+
 
 function resultsNode (results) {
     const artistDiv = document.createElement('div')
@@ -20,11 +22,12 @@ function resultsNode (results) {
     <img src="${results[i].artworkUrl100}">
     <h3>${results[i].artistName}</h3>
     <p class="track">${results[i].trackName}</p>
-    <input class="playback" id="playback" type="button" src="${results[i].previewUrl}" value="Play" onclick="play('${results[i].previewUrl}')">
+    <input class="playback" id="playback" type="button" data-track="${results[i].trackName}" src="${results[i].previewUrl}" value="Play">
     </div>
     `
       return artistDiv   
 }
+
 search.addEventListener('click', () => {
     event.preventDefault()
     let searchTerm = q('#input').value
@@ -43,11 +46,52 @@ search.addEventListener('click', () => {
         }
     })
 });
-function play(source) {
-    music.src = source
-    audio.load()
-    audio.play()
-}
+
+
+q('#artist-results').addEventListener('click', function(event){
+    if (event.target && event.target.matches('#playback')){
+        music.src = event.target.src
+        audio.load()
+        audio.play()
+        let newEl = document.createElement('p')
+        newEl.classList.add("nowPlaying")
+        newEl.innerHTML = event.target.dataset['track']
+        playing.parentNode.replaceChild(newEl, playing)
+        playing = document.querySelector('.nowPlaying')
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function play(source) {
+//     music.src = source
+//     audio.load()
+//     audio.play()
+// }
 
 
 

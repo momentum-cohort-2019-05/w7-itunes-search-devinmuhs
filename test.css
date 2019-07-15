@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-image: url("cassette.jpg");
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-color: #424443;
+    background-position: 50% 0%;
+   }
+
+#audio-controls {
+    margin-top: 250px;
+    margin-left: 250px;
+    width: 250px;
+    background-color: #424443;
+}
