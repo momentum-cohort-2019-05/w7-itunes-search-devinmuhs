@@ -67,11 +67,18 @@ input:focus {
 .artist-div {
     padding-left: 100px;
     float:left;
-    width: 200px;
-    height:200px;
+    width: 250px;
+    height:250px;
     margin-bottom: 50px;
 }
 
 .track {
     margin-bottom: 10px;
+}
+
+.selector {
+    height: 27px;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: lightgray;
 }

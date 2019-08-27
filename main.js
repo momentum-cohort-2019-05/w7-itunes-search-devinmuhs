@@ -18,7 +18,7 @@ function resultsNode (results) {
     const artistDiv = document.createElement('div')
     artistDiv.classList
     artistDiv.innerHTML = `
-    <div class=artist-div>
+    <div class="artist-div">
     <img src="${results[i].artworkUrl100}">
     <h3>${results[i].artistName}</h3>
     <p class="track">${results[i].trackName}</p>
@@ -31,7 +31,7 @@ function resultsNode (results) {
 search.addEventListener('click', () => {
     event.preventDefault()
     let searchTerm = q('#input').value
-    let url = `https://itunes-api-proxy.glitch.me/search?term=${encodeURIComponent(searchTerm)}`
+    let url = `https://itunes-api-proxy.glitch.me/search?term=${encodeURIComponent(searchTerm)}${q('.selector').value}` 
     console.log(url)
     const resultsDiv = q('#artist-results')
     fetch(url)
