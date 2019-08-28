@@ -11,23 +11,33 @@
 <body>
     <h1>Mostly Mediocre Music Site</h1>
     <div class="music-player">
+    <p>Now Playing:</p><p class="nowPlaying"></p>
     <audio controls class="music-bar" id="audio-controls">
         <source id="music-bar" class="music-bar" src="" type="audio/mpeg">
     </audio>
-
-    <p>Now Playing:</p><p class="nowPlaying"></p>
+    
     </div>
     <form>
     <div class="search">
-        <input id="input" placeholder="Search For Artist" type="text">
+        <input id="input" placeholder="Search For Artist" type="text"> 
+        <select class="selector">
+                <option value="">All</option>
+                <option value="&attribute=artistTerm">Artist</option>
+                <option value="&attribute=songTerm">Song</option>
+                <option value="Nickelback">Terrible</option>
+        </select>
     </div>
+    
     <div class="button-line">
         <button id="search-button" value="Search" type="text">Search</button>
     </div>
+
     </form>
+
     <div class="flex">
             <section class="w-50" id="artist-results"></section>
     </div>
-    <a href="test.html">Test</a>
+    
+    <!-- <a href="test.html">Test</a> -->
 </body>
 </html>
